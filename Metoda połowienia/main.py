@@ -21,4 +21,5 @@ if __name__ == '__main__':
             else:
                 a = c
 
-        print(c)
+        print((a + b) / 2)
+        
