@@ -9,13 +9,16 @@ if __name__ == '__main__':
     c = 0
     tolerance = 0.001
 
-    while abs(a - b) > tolerance:
-        c = (a + b) / 2
-        if f(c) == 0:
-            break
-        elif f(a) * f(c) < 0:
-            b = c
-        else:
-            a = c
+    if f(a) * f(b) > 0:
+        print("Incorrect function.")
+    else:
+        while abs(a - b) > tolerance:
+            c = (a + b) / 2
+            if f(c) == 0:
+                break
+            elif f(a) * f(c) < 0:
+                b = c
+            else:
+                a = c
 
-    print(c)
+        print(c)
